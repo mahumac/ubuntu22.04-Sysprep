@@ -5,10 +5,6 @@
 # modified from: jcppkkk/prepare-ubuntu-template.sh
 # TESTED ON UBUNTU 18.04 LTS (Alternate installer, without cloud-init)
 # TESTED ON UBUNTU 22.04.1 LTS (Works for me)
-# http://cdimage.ubuntu.com/releases/18.04.2/release/ubuntu-18.04.2-server-amd64.iso
-
-# SETUP & RUN
-# curl -sL https://raw.githubusercontent.com/netwerkfix/linux-virt-sysprep/master/prepare-ubuntu-18.04-template.sh | sudo -E bash -
 
 if [ `id -u` -ne 0 ]; then
 	echo Need sudo
