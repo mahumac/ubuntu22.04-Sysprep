@@ -65,23 +65,12 @@ EOL
 # make sure the script is executable
 chmod +x /etc/rc.local
 
+#dhcp released
+dhclient -r
+
 #reset hostname
 truncate -s0 /etc/hostname
-hostnamectl set-hostname localhost
-
-#reset machine-id
-truncate -s0 /etc/machine-id
-
-#cleanup apt
-apt clean
-
-# disable swap
-sudo swapoff --all
-sudo sed -ri '/\sswap\s/s/^#?/#/' /etc/fstab
-
-#cleanup shell history
-cat /dev/null > ~/.bash_history && history -c
-history -w
+hostnamectl set-hostname netwerkfix-dc
 
 #disk biger-maker (proxmox virtial disk)
 pvresize /dev/vda3
@@ -89,8 +78,7 @@ lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
 resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 
 #Shutdown in 2min
-shutdown -h +2
+shutdown -r -h +2
 
 #stop de link
 systemctl disable --now sysprep.service
-
