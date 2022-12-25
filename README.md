@@ -1,4 +1,4 @@
-# Fog Project Ubuntu 22.04 Images Sysprep
+## Fog Project Ubuntu 22.04 Images Sysprep
 
 # wget https://github.com/netwerkfix/ubuntu22.04-Sysprep/blob/main/run-installer.sh
 # sudo ./run-installer.sh
