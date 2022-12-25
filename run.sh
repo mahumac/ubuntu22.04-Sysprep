@@ -78,9 +78,9 @@ lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
 resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 
 #disk biger-maker (hard-disk)
-pvresize /dev/sda3
-lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
-resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
+#pvresize /dev/sda3
+#lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
+#resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 
 #Shutdown in 2min
 shutdown -r -h +2
