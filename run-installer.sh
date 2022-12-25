@@ -15,4 +15,4 @@ sleep 2
 chmod 755 /etc/sysprep/delay-boot.sh
 sleep 2
 sytemctl enable --now sysprep.service
-sleep 2 ; reboot
+sleep 3 ; reboot
