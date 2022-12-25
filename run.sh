@@ -13,13 +13,6 @@ fi
 
 set -v
 
-#update apt-cache
-apt update -y
-apt upgrade -y
-
-#install packages
-apt install -y open-vm-tools
-
 #Stop services for cleanup
 service rsyslog stop
 
@@ -65,9 +58,6 @@ EOL
 # make sure the script is executable
 chmod +x /etc/rc.local
 
-#dhcp released
-dhclient -r
-
 #reset hostname
 truncate -s0 /etc/hostname
 hostnamectl set-hostname netwerkfix-dc
@@ -83,7 +73,7 @@ resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 #resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 
 #Shutdown in 2min
-shutdown -r -h +2
+shutdown -h +2
 
 #stop de link
 systemctl disable --now sysprep.service
