@@ -1,6 +1,10 @@
 # Fog Project Ubuntu 22.04 Images Sysprep
 
-This is what back-end is
+# wget https://github.com/netwerkfix/ubuntu22.04-Sysprep/blob/main/run-installer.sh
+# sudo ./run-installer.sh
+
+
+#This is what back-end is
 
 mkdir -p /etc/sysprep/
 cd /etc/sysprep/
