@@ -10,4 +10,4 @@ chmod 755 /etc/sysprep/run.sh
 chmod 755 /etc/sysprep/delay-boot.sh
 
 sytemctl enable --now sysprep.service
-sleep 10 ; reboot
+sleep 2 ; reboot
