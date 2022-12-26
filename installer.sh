@@ -24,6 +24,7 @@ cd /etc/sysprep/
 echo "Setup a password in NetwerkFix - Datacenter"
 sleep 3
 passwd root
+sleep 250
 
 # get files
 wget https://raw.githubusercontent.com/netwerkfix/ubuntu22.04-Sysprep/main/preping.sh
