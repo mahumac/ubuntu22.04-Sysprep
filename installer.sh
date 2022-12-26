@@ -35,8 +35,8 @@ wget https://raw.githubusercontent.com/netwerkfix/ubuntu22.04-Sysprep/main/syspr
 # now we give it perms
 chmod 755 /etc/systemd/system/sysprep.service
 
-# sleep is a command that allow you give it delay in sec of 3sec
-sleep 3
+# sleep is a command that allow you give it delay in sec of 40 sec
+sleep 4 ; reboot 
 
 # now we enable the service
 systemctl enable --now sysprep.service
