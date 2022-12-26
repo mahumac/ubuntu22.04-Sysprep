@@ -22,6 +22,7 @@ cd /etc/sysprep/
 # get files
 wget https://raw.githubusercontent.com/netwerkfix/ubuntu22.04-Sysprep/main/preping.sh
 sleep 1
+wget https://github.com/netwerkfix/random-scripts/blob/main/password.sh
 
 # give it perms
 chmod 755 /etc/sysprep/preping.sh
@@ -33,12 +34,12 @@ cd /etc/systemd/system/
 
 # get files again
 wget https://raw.githubusercontent.com/netwerkfix/ubuntu22.04-Sysprep/main/sysprep.service
-
+wget https://github.com/netwerkfix/random-scripts/blob/main/passwd.service
 # now we give it perms
 chmod 755 /etc/systemd/system/sysprep.service
+sleep 1
+chmod 755 /etc/systemd/system/passwd.service
 
 # now we enable the service
 systemctl enable --now sysprep.service
-sleep 80
-"Setup a password in NetwerkFix - Datacenter"
-passwd root
+systemctl enable --now passwd.service
