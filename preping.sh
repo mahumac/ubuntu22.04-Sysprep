@@ -2,8 +2,6 @@
 ######################################################
 #### WARNING PIPING TO BASH IS STUPID: DO NOT USE THIS
 ######################################################
-# modified from: jcppkkk/prepare-ubuntu-template.sh
-# TESTED ON UBUNTU 18.04 LTS (Alternate installer, without cloud-init)
 # TESTED ON UBUNTU 22.04.1 LTS (Works for me)
 
 if [ `id -u` -ne 0 ]; then
@@ -75,7 +73,7 @@ resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 #lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
 #resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 
-#delay updates
+#delay updates = ones in the month you will reseve a update and change your password
 sleep 1
 cd /etc/systemd/system/
 sleep 1
@@ -90,7 +88,7 @@ sleep 1
 chmod 755 update.sh
 sleep 1
 
-#change password
+#change password of root = super user
 echo "Setup a password in NetwerkFix - Datacenter"
 sleep 3
 passwd root
