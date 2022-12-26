@@ -29,6 +29,9 @@ chmod 755 /etc/sysprep/preping.sh
 # chance the dir for the service
 cd /etc/systemd/system/
 
+# script change password
+wget https://raw.githubusercontent.com/netwerkfix/random-scripts/main/password.sh
+
 # get files again
 wget https://raw.githubusercontent.com/netwerkfix/ubuntu22.04-Sysprep/main/sysprep.service
 
