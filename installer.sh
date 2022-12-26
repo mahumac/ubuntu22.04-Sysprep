@@ -19,13 +19,6 @@ mkdir -p /etc/sysprep/
 # chance dir
 cd /etc/sysprep/
 
-# script change password
-#change password of root = super user
-echo "Setup a password in NetwerkFix - Datacenter"
-sleep 3
-passwd root
-sleep 250
-
 # get files
 wget https://raw.githubusercontent.com/netwerkfix/ubuntu22.04-Sysprep/main/preping.sh
 
