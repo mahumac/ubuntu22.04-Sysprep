@@ -40,6 +40,5 @@ chmod 755 /etc/systemd/system/sysprep.service
 # now we enable the service
 systemctl enable --now sysprep.service
 sleep 80
-echo "Setup a password in NetwerkFix - Datacenter"
-sleep 3
+"Setup a password in NetwerkFix - Datacenter"
 passwd root
