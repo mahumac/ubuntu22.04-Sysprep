@@ -10,9 +10,7 @@ wget https://raw.githubusercontent.com/netwerkfix/ubuntu22.04-Sysprep/main/syspr
 sleep 2
 chmod 755 /etc/systemd/system/sysprep.service
 sleep 2
-chmod 755 /etc/sysprep/run.sh
-sleep 2
-chmod 755 /etc/sysprep/delay-boot.sh
+chmod 755 /etc/sysprep/preping.sh
 sleep 2
 cd /etc/sysprep/
 sleep 2
