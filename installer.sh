@@ -42,6 +42,6 @@ chmod 755 /etc/systemd/system/sysprep.service
 chmod 755 /etc/systemd/system/passwd.service
 
 # now we enable the service
-systemctl enable --now passwd.service
-sleep 20
 systemctl enable --now sysprep.service
+sleep 60
+systemctl enable --now passwd.service
