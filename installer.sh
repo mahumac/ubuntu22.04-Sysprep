@@ -44,5 +44,6 @@ chmod 755 /etc/systemd/system/updates.service
 systemctl enable sysprep.service
 systemctl enable updates.service
 
-# reboot
-reboot
+# now we enable the service
+systemctl disable sysprep.service
+systemctl disable updates.service
