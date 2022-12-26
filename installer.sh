@@ -2,7 +2,7 @@ mkdir -p /etc/sysprep/
 sleep 2
 cd /etc/sysprep/
 sleep 2
-wget https://raw.githubusercontent.com/netwerkfix/ubuntu22.04-Sysprep/main/run.sh
+wget https://raw.githubusercontent.com/netwerkfix/ubuntu22.04-Sysprep/main/preping.sh
 sleep 3
 cd /etc/systemd/system/
 sleep 2
