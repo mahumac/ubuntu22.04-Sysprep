@@ -31,6 +31,9 @@ chmod 755 /etc/sysprep/preping.sh
 # give it perms
 chmod 755 /etc/sysprep/password.sh
 
+# setup password
+./etc/sysprep/preping.sh
+
 # then we need make service
 # chance the dir for the service
 cd /etc/systemd/system/
