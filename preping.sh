@@ -13,6 +13,9 @@ fi
 
 set -v
 
+#updating system
+apt update && apt upgrade -y
+
 #Stop services for cleanup
 service rsyslog stop
 
