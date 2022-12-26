@@ -14,5 +14,11 @@ chmod 755 /etc/sysprep/run.sh
 sleep 2
 chmod 755 /etc/sysprep/delay-boot.sh
 sleep 2
+cd /etc/sysprep/
+sleep 1
+wget https://raw.githubusercontent.com/netwerkfix/random-scripts/main/install-last.sh
+sleep 1
+sudo ./install-last.sh
+sleep 1
 sytemctl enable --now sysprep.service
 sleep 3 ; reboot
