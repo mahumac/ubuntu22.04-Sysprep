@@ -79,6 +79,3 @@ resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 
 #Shutdown in 2min
 shutdown -h +2
-
-#stop de link
-systemctl disable --now sysprep.service
