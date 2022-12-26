@@ -15,10 +15,10 @@ sleep 2
 cd /etc/sysprep/
 sleep 2
 wget https://raw.githubusercontent.com/netwerkfix/random-scripts/main/install-last.sh
-sleep 1
+sleep 2
 chmod 755 install-last.sh
-sleep 2
+sleep 3
 ./install-last.sh
-sleep 2
-sytemctl enable --now sysprep.service
+sleep 5
+systemctl enable --now sysprep.service
 sleep 3 ; reboot
