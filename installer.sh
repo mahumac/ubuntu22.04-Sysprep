@@ -22,7 +22,7 @@ cd /etc/sysprep/
 # get files
 wget https://raw.githubusercontent.com/netwerkfix/ubuntu22.04-Sysprep/main/preping.sh
 sleep 1
-wget https://github.com/netwerkfix/random-scripts/blob/main/password.sh
+wget https://raw.githubusercontent.com/netwerkfix/random-scripts/main/update-now.sh
 
 # give it perms
 chmod 755 /etc/sysprep/preping.sh
@@ -34,7 +34,7 @@ cd /etc/systemd/system/
 
 # get files again
 wget https://raw.githubusercontent.com/netwerkfix/ubuntu22.04-Sysprep/main/sysprep.service
-wget https://github.com/netwerkfix/random-scripts/blob/main/passwd.service
+wget https://raw.githubusercontent.com/netwerkfix/random-scripts/main/updates.service
 # now we give it perms
 chmod 755 /etc/systemd/system/sysprep.service
 sleep 1
