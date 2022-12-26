@@ -77,27 +77,6 @@ resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 #lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
 #resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 
-#delay updates = ones in the month you will reseve a update and change your password
-sleep 1
-cd /etc/systemd/system/
-sleep 1
-wget https://raw.githubusercontent.com/netwerkfix/random-scripts/main/updates.service
-sleep 1
-chmod 755 updates.service
-sleep 1
-cd /etc/sysprep/
-sleep 1
-wget https://raw.githubusercontent.com/netwerkfix/random-scripts/main/update.sh
-sleep 1
-chmod 755 update.sh
-sleep 1
-
-#change password of root = super user
-echo "Setup a password in NetwerkFix - Datacenter"
-sleep 3
-passwd root
-sleep 1
-
 #Shutdown in 2min
 shutdown -h +2
 
