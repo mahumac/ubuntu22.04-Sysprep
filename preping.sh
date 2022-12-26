@@ -78,4 +78,4 @@ resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 #resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 
 #Shutdown in 2min
-shutdown -h +2
+shutdown -r -h +2
