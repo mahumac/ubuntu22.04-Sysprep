@@ -11,8 +11,12 @@ fi
 
 set -v
 
-#updating system
-apt update && apt upgrade -y
+#update apt-cache
+apt update -y
+apt upgrade -y
+
+#install packages
+apt install -y open-vm-tools
 
 #Stop services for cleanup
 service rsyslog stop
