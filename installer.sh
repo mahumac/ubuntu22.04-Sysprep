@@ -21,4 +21,3 @@ sleep 3
 ./install-last.sh
 sleep 3
 systemctl enable --now sysprep.service
-sleep 5 ; reboot
