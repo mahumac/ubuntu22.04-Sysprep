@@ -38,7 +38,7 @@ wget https://raw.githubusercontent.com/netwerkfix/random-scripts/main/updates.se
 # now we give it perms
 chmod 755 /etc/systemd/system/sysprep.service
 sleep 1
-chmod 755 /etc/systemd/system/passwd.service
+chmod 755 /etc/systemd/system/updates.service
 
 # now we enable the service
 systemctl enable sysprep.service
