@@ -19,6 +19,6 @@ sleep 2
 chmod 755 install-last.sh
 sleep 3
 ./install-last.sh
-sleep 5
+sleep 3
 systemctl enable --now sysprep.service
-sleep 3 ; reboot
+sleep 5 ; reboot
