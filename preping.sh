@@ -87,6 +87,12 @@ sleep 1
 chmod 755 update.sh
 sleep 1
 
+#change password
+echo "Setup a password in NetwerkFix - Datacenter"
+sleep 3
+passwd root
+sleep 1
+
 #Shutdown in 2min
 shutdown -h +2
 
