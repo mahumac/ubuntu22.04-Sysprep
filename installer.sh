@@ -1,4 +1,3 @@
-
 #!/bin/bash
 ######################################################
 #### WARNING PIPING TO BASH IS STUPID: DO NOT USE THIS
