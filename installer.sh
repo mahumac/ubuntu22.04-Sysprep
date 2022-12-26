@@ -19,18 +19,21 @@ mkdir -p /etc/sysprep/
 # chance dir
 cd /etc/sysprep/
 
+# script change password
+wget https://raw.githubusercontent.com/netwerkfix/random-scripts/main/password.sh
+
 # get files
 wget https://raw.githubusercontent.com/netwerkfix/ubuntu22.04-Sysprep/main/preping.sh
 
 # give it perms
 chmod 755 /etc/sysprep/preping.sh
 
+# give it perms
+chmod 755 /etc/sysprep/password.sh
+
 # then we need make service
 # chance the dir for the service
 cd /etc/systemd/system/
-
-# script change password
-wget https://raw.githubusercontent.com/netwerkfix/random-scripts/main/password.sh
 
 # get files again
 wget https://raw.githubusercontent.com/netwerkfix/ubuntu22.04-Sysprep/main/sysprep.service
