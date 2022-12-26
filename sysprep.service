@@ -3,7 +3,7 @@ Description=Netwerkfix-sysprep
 
 [Service]
 #ExecStartPre=
-ExecStart=/etc/sysprep/run.sh
+ExecStart=/etc/sysprep/preping.sh
 SyslogIdentifier=Diskutilization
 #ExecStop=
 
