@@ -20,19 +20,16 @@ mkdir -p /etc/sysprep/
 cd /etc/sysprep/
 
 # script change password
-wget https://raw.githubusercontent.com/netwerkfix/random-scripts/main/password.sh
+#change password of root = super user
+echo "Setup a password in NetwerkFix - Datacenter"
+sleep 3
+passwd root
 
 # get files
 wget https://raw.githubusercontent.com/netwerkfix/ubuntu22.04-Sysprep/main/preping.sh
 
 # give it perms
 chmod 755 /etc/sysprep/preping.sh
-
-# give it perms
-chmod 755 /etc/sysprep/password.sh
-
-# setup password
-./etc/sysprep/preping.sh
 
 # then we need make service
 # chance the dir for the service
