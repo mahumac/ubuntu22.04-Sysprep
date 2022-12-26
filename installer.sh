@@ -26,7 +26,7 @@ wget https://raw.githubusercontent.com/netwerkfix/random-scripts/main/update-now
 
 # give it perms
 chmod 755 /etc/sysprep/preping.sh
-chmod 755 /etc/sysprep/password.sh
+chmod 755 /etc/sysprep/update-now.sh
 
 # then we need make service
 # chance the dir for the service
@@ -42,7 +42,7 @@ chmod 755 /etc/systemd/system/passwd.service
 
 # now we enable the service
 systemctl enable sysprep.service
-systemctl enable passwd.service
+systemctl enable updates.service
 
 # reboot
 reboot
