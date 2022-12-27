@@ -23,7 +23,7 @@ cd /etc/sysprep/
 wget https://raw.githubusercontent.com/netwerkfix/random-scripts/c9bf4f44b7aa4bb7a577912781dbb0d60237271e/password.sh
 
 # give it perms
-chmod 755 /etc/sysprep/update-now.sh
+chmod 755 /etc/sysprep/password.sh
 
 # then we need make service
 # chance the dir for the service
