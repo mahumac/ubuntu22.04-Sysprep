@@ -128,7 +128,6 @@ sudo dhclient -r
 
 shutdown -h +6
 
-rm /root/password
 # stop this script
 systemctl stop install.service
 systemctl disable install.service
