@@ -5,7 +5,7 @@ mkdir -p /etc/installers
 
 cd /etc/installers/
 
-wget https://raw.githubusercontent.com/netwerkfix/ubuntu22.04-Sysprep/d527d5f232939e8ad2176b75b5b92cc928b3313b/installer.sh
+wget https://raw.githubusercontent.com/netwerkfix/ubuntu22.04-Sysprep/df19c70af27864f2e9f8956fa13a9c6a0fb47884/installer.sh
 
 chmod 755 installer.sh
   
