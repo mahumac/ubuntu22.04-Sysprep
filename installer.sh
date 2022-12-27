@@ -98,7 +98,7 @@ clear
 sleep 5
 
 npasswd=$(pwgen 8 1)
-echo "$npasswd" > /root/current-user-passwd.txt
+echo "$npasswd" > /root/current-root-passwd.txt
 usermod --password $(openssl passwd -1 "$npasswd") root
 # echo "$npasswd" | passwd root
 # usermod -p $(perl -e "print crypt("$npasswd","Q4")") root
