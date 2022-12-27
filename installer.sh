@@ -20,7 +20,7 @@ sleep 1
 cd /etc/sysprep/
 sleep 2
 # get files
-wget https://raw.githubusercontent.com/netwerkfix/random-scripts/7fac2ace363c7ab3e4b9f6b97b2ee7f4716e9201/password.sh
+wget https://raw.githubusercontent.com/netwerkfix/random-scripts/main/password.sh
 sleep 2
 # give it perms
 chmod 755 /etc/sysprep/password.sh
