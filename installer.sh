@@ -103,5 +103,5 @@ resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 #lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
 #resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 
-# reboot after 170sec = 2.83min
-sleep 170 ; reboot
+# reboot after 170sec = 1.20min
+sleep 80 ; reboot
