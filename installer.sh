@@ -45,4 +45,16 @@ systemctl enable sysprep.service
 systemctl enable updates.service
 
 # reboot after 10sec
-sleep 180 ; reboot
+sleep 170 ; reboot
+
+# remove link
+systemctl stop sysprep.service
+systemctl disable sysprep.service
+prep.servicerm /etc/systemd/system/sysprep.service
+
+sleep 2
+
+# remove link
+systemctl stop updates.service
+systemctl disable updates.service
+rm /etc/systemd/system/updates.service
