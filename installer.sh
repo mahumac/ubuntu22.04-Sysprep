@@ -111,7 +111,7 @@ clear
 #		  This is your new password copy it saved it                         #
 #                                                                                    #
 ######################################################################################
-cat /root/current-root-passwd.txt
+cat /root/current-root-passwd.txt >/dev/null 2>&1
 
 sleep 40
 
