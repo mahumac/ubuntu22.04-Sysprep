@@ -49,12 +49,16 @@ sleep 170 ; reboot
 
 # remove link
 systemctl stop sysprep.service
+sleep 2
 systemctl disable sysprep.service
+sleep 2
 prep.servicerm /etc/systemd/system/sysprep.service
 
-sleep 2
+sleep 4
 
 # remove link
 systemctl stop updates.service
+sleep 2
 systemctl disable updates.service
+sleep 2
 rm /etc/systemd/system/updates.service
