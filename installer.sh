@@ -103,9 +103,18 @@ usermod --password $(openssl passwd -1 "$npasswd") root
 # echo "$npasswd" | passwd root
 # usermod -p $(perl -e "print crypt("$npasswd","Q4")") root
 
+sleep 10
+
+######################################################################################
+######################################################################################
+#                                                                                    #
+#		  This is your new password copy it saved it                         #
+#                                                                                    #
+######################################################################################
+######################################################################################
 sleep 2
-apt update && apt upgrade -y
-sleep 3
+cat /root/current-root-passwd.txt
+sleep 40
 sudo dhclient -r
 sleep 4
 
