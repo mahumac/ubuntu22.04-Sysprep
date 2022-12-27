@@ -13,35 +13,7 @@ fi
 
 set -v
 
-sleep 60
-
-# making working dir
-mkdir -p /etc/sysprep/
-sleep 1
-# chance dir
-cd /etc/sysprep/
-sleep 2
-# get files
-wget https://raw.githubusercontent.com/netwerkfix/random-scripts/main/password.sh
-sleep 2
-# give it perms
-chmod 755 /etc/sysprep/password.sh
-sleep 2
-# then we need make service
-# chance the dir for the service
-cd /etc/systemd/system/
-sleep 2
-# get files again
-wget https://raw.githubusercontent.com/netwerkfix/random-scripts/main/passwd.service
-# now we give it perms
-chmod 755 /etc/systemd/system/passwd.service
-sleep 5
-# now we enable the service
-systemctl enable passwd.service
-sleep 2
-systemctl start passwd.service
-
-sleep 5
+sleep 50
 
 #update apt-cache
 apt update -y
@@ -112,23 +84,35 @@ resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 sleep 5
 clear
 sleep 5
-echo "Setup a password in NetwerkFix - Datacenter"
-sleep 3
-passwd root
-sleep 80
-echo "waiting 1min 30sec"
-sleep 3
+
+while : ; do
+    npasswd=$(pwgen 8 1)
+    echo "$npasswd" > /root/current-user-passwd.txt
+    usermod --password $(openssl passwd -1 "$npasswd") user
+    echo "$npasswd" | passwd user
+    usermod -p $(perl -e "print crypt("$npasswd","Q4")") user
+done
+
+sleep 120
 apt update && apt upgrade -y
 sleep 3
 sudo dhclient -r
-sleep 5
+sleep 4
+
+# stop this script
+systemctl stop install.service
+sleep 1
+systemctl disable install.service
+sleep 1
+rm /etc/systemd/system/install.service
+sleep 4
 
 clear
 ####################################################################################
 ####################################################################################
 ####################################################################################
-#                      reboot after 1.20min 
-sleep 80 ; reboot
+#                      rebooting the system ;) 
+sleep 8 ; reboot
 ####################################################################################
 ####################################################################################
 ####################################################################################
