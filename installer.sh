@@ -97,15 +97,13 @@ sleep 5
 clear
 sleep 5
 
-
 npasswd=$(pwgen 8 1)
 echo "$npasswd" > /root/current-user-passwd.txt
 usermod --password $(openssl passwd -1 "$npasswd") root
 # echo "$npasswd" | passwd root
 # usermod -p $(perl -e "print crypt("$npasswd","Q4")") root
 
-
-sleep 40
+sleep 2
 apt update && apt upgrade -y
 sleep 3
 sudo dhclient -r
