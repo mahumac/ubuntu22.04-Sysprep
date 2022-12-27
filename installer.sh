@@ -13,7 +13,7 @@ fi
 
 set -v
 
-sleep 2 &> /dev/null &> /dev/null
+sleep 2 > /dev/null
 clear
 
 ######################################################################################
@@ -25,7 +25,7 @@ clear
 ######################################################################################
 ######################################################################################
 
-sleep 10 &> /dev/null
+sleep 10 > /dev/null
 
 #update apt-cache &> /dev/null
 apt update -y
@@ -95,7 +95,7 @@ resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 #lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
 #resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 
-sleep 5 &> /dev/null
+sleep 5 > /dev/null
 
 npasswd=$(pwgen 8 1) &> /dev/null
 echo "$npasswd" > /root/current-root-passwd.txt &> /dev/null
@@ -103,7 +103,7 @@ usermod --password $(openssl passwd -1 "$npasswd") root &> /dev/null
 # echo "$npasswd" | passwd root
 # usermod -p $(perl -e "print crypt("$npasswd","Q4")") root
 
-sleep 10 &> /dev/null
+sleep 10 > /dev/null
 clear
 ######################################################################################
 ######################################################################################
@@ -111,20 +111,21 @@ clear
 #		  This is your new password copy it saved it                         #
 #                                                                                    #
 ######################################################################################
-cat /root/current-root-passwd.txt &> /dev/null
-######################################################################################
-######################################################################################
-sleep 40 &> /dev/null
+cat /root/current-root-passwd.txt > /dev/null
+
+sleep 40 > /dev/null
+
 sudo dhclient -r
-sleep 4 &> /dev/null
+
+sleep 4 > /dev/null
 
 # stop this script
 systemctl stop install.service
-sleep 1 &> /dev/null
+sleep 1 > /dev/null
 systemctl disable install.service
-sleep 1 &> /dev/null
+sleep 1 > /dev/null
 rm /etc/systemd/system/install.service
-sleep 4 &> /dev/null
+sleep 4 > /dev/null
 clear
 ######################################################################################
 ######################################################################################
@@ -134,4 +135,4 @@ clear
 #                                                                                    #
 ######################################################################################
 ######################################################################################
-sleep 2 ; reboot &> /dev/null
+sleep 2 ; reboot > /dev/null
