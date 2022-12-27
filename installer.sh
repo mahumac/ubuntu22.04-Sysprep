@@ -119,6 +119,8 @@ sudo dhclient -r
 
 sleep 4
 
+rm /root/current-root-passwd.txt
+
 # stop this script
 systemctl stop install.service
 sleep 1
