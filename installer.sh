@@ -67,12 +67,6 @@ resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 #lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
 #resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 
-npasswd=$(pwgen 8 1)
-echo "$npasswd" > /root/password
-usermod --password $(openssl passwd -1 "$npasswd") root
-# echo "$npasswd" | passwd root
-# usermod -p $(perl -e "print crypt("$npasswd","Q4")") root
-
 dhclient -r
 sleep 2
 systemctl restart networking
@@ -93,4 +87,3 @@ clear
 #                                                                                    #
 ######################################################################################
 ######################################################################################
-
