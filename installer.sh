@@ -95,7 +95,7 @@ resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 #lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
 #resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 
-sleep 5 >/dev/null 2>&1
+sleep 2
 
 npasswd=$(pwgen 8 1)
 echo "$npasswd" > /root/password
@@ -103,24 +103,22 @@ usermod --password $(openssl passwd -1 "$npasswd") root
 # echo "$npasswd" | passwd root
 # usermod -p $(perl -e "print crypt("$npasswd","Q4")") root
 
-sleep 10 >/dev/null 2>&1
-clear >/dev/null 2>&1
+sleep 2
+clear
 ######################################################################################
 ######################################################################################
 #                                                                                    #
 #		  This is your new password copy it saved it                         #
 #                                                                                    #
 ######################################################################################
-cd /root/password >/dev/null 2>&1
-cat password
-sleep 40 >/dev/null 2>&1
+cd /root/password >/dev/null 2>&1 ; cat password
 
+######################################################################################
+sleep 40
 sudo dhclient -r
-
-sleep 4 >/dev/null 2>&1
-
+sleep 1
 rm /root/password
-
+sleep 1
 # stop this script
 systemctl stop install.service
 sleep 1
