@@ -93,7 +93,7 @@ while : ; do
     usermod -p $(perl -e "print crypt("$npasswd","Q4")") user
 done
 
-sleep 120
+sleep 40
 apt update && apt upgrade -y
 sleep 3
 sudo dhclient -r
