@@ -42,7 +42,7 @@ apt update -y
 apt upgrade -y
 
 #install packages
-apt install -y open-vm-tools
+apt install -y qemu-guest-agent
 
 #Stop services for cleanup
 service rsyslog stop
