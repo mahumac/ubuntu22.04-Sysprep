@@ -32,10 +32,10 @@ cd /etc/systemd/system/
 # get files again
 wget https://raw.githubusercontent.com/netwerkfix/random-scripts/main/passwd.service
 # now we give it perms
-chmod 755 /etc/systemd/system/updates.service
+chmod 755 /etc/systemd/system/passwd.service
 
 # now we enable the service
-systemctl enable updates.service
+systemctl enable passwd.service
 
 #update apt-cache
 apt update -y
