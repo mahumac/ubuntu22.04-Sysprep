@@ -13,6 +13,8 @@ fi
 
 set -v
 
+sleep 60
+
 # making working dir
 mkdir -p /etc/sysprep/
 sleep 1
