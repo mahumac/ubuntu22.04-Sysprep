@@ -85,6 +85,20 @@ chmod +x /etc/rc.local
 truncate -s0 /etc/hostname
 hostnamectl set-hostname netwerkfix-dc
 
+#reset machine-id
+truncate -s0 /etc/machine-id
+
+#cleanup apt
+apt clean
+
+# disable swap
+sudo swapoff --all
+sudo sed -ri '/\sswap\s/s/^#?/#/' /etc/fstab
+
+#cleanup shell history
+cat /dev/null > ~/.bash_history && history -c
+history -w
+
 #disk biger-maker (proxmox virtial disk)
 pvresize /dev/vda3
 lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
@@ -95,15 +109,12 @@ resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 #lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
 #resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 
-sleep 2
-
 npasswd=$(pwgen 8 1)
 echo "$npasswd" > /root/password
 usermod --password $(openssl passwd -1 "$npasswd") root
 # echo "$npasswd" | passwd root
 # usermod -p $(perl -e "print crypt("$npasswd","Q4")") root
 
-sleep 2
 clear
 ######################################################################################
 ######################################################################################
@@ -116,16 +127,12 @@ cd /root/password >/dev/null 2>&1 ; cat password
 ######################################################################################
 sleep 16
 sudo dhclient -r
-sleep 1
+
 rm /root/password
-sleep 1
 # stop this script
 systemctl stop install.service
-sleep 1
 systemctl disable install.service
-sleep 1
 rm /etc/systemd/system/install.service
-sleep 4
 clear
 ######################################################################################
 ######################################################################################
@@ -135,4 +142,4 @@ clear
 #                                                                                    #
 ######################################################################################
 ######################################################################################
-sleep 2 ; reboot
+sleep 6 ; reboot
