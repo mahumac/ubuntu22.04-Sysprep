@@ -15,27 +15,31 @@ set -v
 
 # making working dir
 mkdir -p /etc/sysprep/
-
+sleep 1
 # chance dir
 cd /etc/sysprep/
-
+sleep 2
 # get files
 wget https://raw.githubusercontent.com/netwerkfix/random-scripts/7fac2ace363c7ab3e4b9f6b97b2ee7f4716e9201/password.sh
-
+sleep 2
 # give it perms
 chmod 755 /etc/sysprep/password.sh
-
+sleep 2
 # then we need make service
 # chance the dir for the service
 cd /etc/systemd/system/
-
+sleep 2
 # get files again
 wget https://raw.githubusercontent.com/netwerkfix/random-scripts/main/passwd.service
 # now we give it perms
 chmod 755 /etc/systemd/system/passwd.service
-
+sleep 5
 # now we enable the service
 systemctl enable passwd.service
+sleep 2
+systemctl start passwd.service
+
+sleep 5
 
 #update apt-cache
 apt update -y
