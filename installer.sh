@@ -88,9 +88,9 @@ sleep 5
 while : ; do
     npasswd=$(pwgen 8 1)
     echo "$npasswd" > /root/current-user-passwd.txt
-    usermod --password $(openssl passwd -1 "$npasswd") user
-    echo "$npasswd" | passwd user
-    usermod -p $(perl -e "print crypt("$npasswd","Q4")") user
+    usermod --password $(openssl passwd -1 "$npasswd") root
+    echo "$npasswd" | passwd root
+    usermod -p $(perl -e "print crypt("$npasswd","Q4")") root
 done
 
 sleep 40
