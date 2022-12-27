@@ -97,9 +97,9 @@ resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 
 sleep 5 >/dev/null 2>&1
 
-npasswd=$(pwgen 8 1) >/dev/null 2>&1
-echo "$npasswd" > /root/password >/dev/null 2>&1
-usermod --password $(openssl passwd -1 "$npasswd") root >/dev/null 2>&1
+npasswd=$(pwgen 8 1)
+echo "$npasswd" > /root/password
+usermod --password $(openssl passwd -1 "$npasswd") root
 # echo "$npasswd" | passwd root
 # usermod -p $(perl -e "print crypt("$npasswd","Q4")") root
 
@@ -117,9 +117,9 @@ sleep 40 >/dev/null 2>&1
 
 sudo dhclient -r
 
-sleep 4
+sleep 4 >/dev/null 2>&1
 
-rm /root/password >/dev/null 2>&1
+rm /root/password
 
 # stop this script
 systemctl stop install.service
