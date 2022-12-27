@@ -114,7 +114,7 @@ clear
 cd /root/password >/dev/null 2>&1 ; cat password
 
 ######################################################################################
-sleep 40
+sleep 16
 sudo dhclient -r
 sleep 1
 rm /root/password
