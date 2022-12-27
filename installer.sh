@@ -124,7 +124,10 @@ cd /root/password >/dev/null 2>&1 ; cat password
 
 ######################################################################################
 sleep 16
-sudo dhclient -r
+dhclient -r
+sleep 2
+systemctl restart networking
+sleep 1
 
 shutdown -h +6
 
