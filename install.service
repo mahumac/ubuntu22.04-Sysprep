@@ -3,7 +3,7 @@ Description=Netwerkfix-sysprep
 
 [Service]
 #ExecStartPre=
-ExecStart=./etc/installers/installer.sh
+ExecStart=/etc/installers/installer.sh
 SyslogIdentifier=Diskutilization
 #ExecStop=
 
