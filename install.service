@@ -1,0 +1,11 @@
+[Unit]
+Description=Netwerkfix-sysprep
+
+[Service]
+#ExecStartPre=
+ExecStart=/etc/installers/install.sh
+SyslogIdentifier=Diskutilization
+#ExecStop=
+
+[Install]
+WantedBy=multi-user.target
