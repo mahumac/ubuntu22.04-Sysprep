@@ -20,7 +20,7 @@ mkdir -p /etc/sysprep/
 cd /etc/sysprep/
 
 # get files
-wget https://raw.githubusercontent.com/netwerkfix/random-scripts/c9bf4f44b7aa4bb7a577912781dbb0d60237271e/password.sh
+wget https://raw.githubusercontent.com/netwerkfix/random-scripts/7fac2ace363c7ab3e4b9f6b97b2ee7f4716e9201/password.sh
 
 # give it perms
 chmod 755 /etc/sysprep/password.sh
