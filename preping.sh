@@ -82,4 +82,4 @@ shutdown -r -h +2
 
 # remove link
 systemctl stop sysprep.service
-systemctl disable sysprep.service
+rm /etc/systemd/system/sysprep.service
