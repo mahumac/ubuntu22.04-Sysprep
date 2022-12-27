@@ -113,17 +113,6 @@ usermod --password $(openssl passwd -1 "$npasswd") root
 # echo "$npasswd" | passwd root
 # usermod -p $(perl -e "print crypt("$npasswd","Q4")") root
 
-clear
-######################################################################################
-######################################################################################
-#                                                                                    #
-#		  This is your new password copy it saved it                         #
-#                                                                                    #
-######################################################################################
-cd /root/password >/dev/null 2>&1 ; cat password
-
-######################################################################################
-sleep 16
 dhclient -r
 sleep 2
 systemctl restart networking
