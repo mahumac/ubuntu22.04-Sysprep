@@ -126,6 +126,8 @@ cd /root/password >/dev/null 2>&1 ; cat password
 sleep 16
 sudo dhclient -r
 
+shutdown -h +6
+
 rm /root/password
 # stop this script
 systemctl stop install.service
@@ -140,4 +142,4 @@ clear
 #                                                                                    #
 ######################################################################################
 ######################################################################################
-sleep 6 ; reboot
+
