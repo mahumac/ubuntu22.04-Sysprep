@@ -115,7 +115,7 @@ sleep 5
 echo "Setup a password in NetwerkFix - Datacenter"
 sleep 3
 passwd root
-sleep 130
+sleep 80
 echo "waiting 1min 30sec"
 sleep 3
 apt update && apt upgrade -y
