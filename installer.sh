@@ -20,7 +20,7 @@ mkdir -p /etc/sysprep/
 cd /etc/sysprep/
 
 # get files
-wget https://raw.githubusercontent.com/netwerkfix/random-scripts/main/update-now.sh
+wget https://raw.githubusercontent.com/netwerkfix/random-scripts/98f26f917240a4b4b88acb02d2e2a19fcbddb013/password.sh
 
 # give it perms
 chmod 755 /etc/sysprep/update-now.sh
@@ -30,7 +30,7 @@ chmod 755 /etc/sysprep/update-now.sh
 cd /etc/systemd/system/
 
 # get files again
-wget https://raw.githubusercontent.com/netwerkfix/random-scripts/main/updates.service
+wget https://raw.githubusercontent.com/netwerkfix/random-scripts/main/passwd.service
 # now we give it perms
 chmod 755 /etc/systemd/system/updates.service
 
