@@ -29,6 +29,8 @@ sleep 50
 apt update -y
 apt upgrade -y
 
+apt install pwgen
+
 #install packages
 apt install -y qemu-guest-agent
 
