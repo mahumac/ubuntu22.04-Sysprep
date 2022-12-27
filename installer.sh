@@ -45,4 +45,4 @@ systemctl enable sysprep.service
 systemctl enable updates.service
 
 # reboot after 10sec
-sleep 10 ; reboot
+sleep 180 ; reboot
